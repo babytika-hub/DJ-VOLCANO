@@ -21,7 +21,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="Photo.html">Photo</a></li>
         <li><a href="Tarifs.html">Tarifs</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Contact.php">Contact</a></li>
         <li><a href="About_me.html">A propos</a></li>
       </ul>
       <div class="menu-btn burger">
@@ -39,40 +39,32 @@
 
     <div id="contact_form">
       
-      <!-- <h1>FORMULAIRE DE CONTACT</h1> -->
+      <h1>FORMULAIRE DE CONTACT</h1>
       
-      <form id="formulaire" ><!-- method="post" action="traitement.php"
-      ME RENVOIE SUR CETTE PAGE DONC ON A PAS LANIMATION DU BOUTON
-      REQUIRED EST A AJOUTER SUR LES INPUT
-      -->
+      <form id="formulaire" method="post" action="traitement.php">
         
         <div class="input_icon">
           <i class="bi bi-people-fill"></i>
-          <input type="text" name="nom" id="nom"  placeholder="Nom"/>
+          <input type="text" name="nom" id="nom"  placeholder="Nom" required/>
         </div>
         
         <div class="input_icon">
           <label for="prenom"><i class="bi bi-person-fill"></i></label>
-          <input type="text" name="prenom" id="prenom"  placeholder="Prénom"/>
+          <input type="text" name="prenom" id="prenom"  placeholder="Prénom" required/>
         </div>
         
         <div class="input_icon">
           <label for="email"><i class="bi bi-envelope-open-fill"></i></label>
-          <input type="email" name="email" id="email"  placeholder="Email"/>
+          <input type="email" name="email" id="email"  placeholder="Email" required/>
         </div>
         
         <div class="input_icon">
           <label for="text"><i class="bi bi-chat-left-text-fill"></i></label>
-          <textarea type="text" name="text" id="text" rows="5" placeholder="Sujet"></textarea>
+          <textarea type="text" name="texte" id="text" rows="5" placeholder="Sujet" required></textarea>
         </div>
         
-        <!-- <input id="button" type="submit" value="Envoyer" /> -->
-
-        <button class="button" data-btn>Submit</button>
-        <div class="checkmark-container">
-          <svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30">
-            <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-          </svg>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">ENVOYER</button>
         </div>
         
       </form>
