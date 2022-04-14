@@ -254,6 +254,31 @@ dl, ol, ul{
     margin-top: 2rem;
   }
 
+  #card_presta{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+  #card_presta img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card{
+    border: none;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+    margin-bottom: 2rem;
+  }
+  .card-title{
+    letter-spacing: 1px;
+  }
+
   /* PAGE CONTACT */
   #contact{
     display: flex;
@@ -447,6 +472,9 @@ dl, ol, ul{
   }
   .nav_bar .menu-list{
     z-index: 1;
+  }
+  #card_presta{
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 868px) {
