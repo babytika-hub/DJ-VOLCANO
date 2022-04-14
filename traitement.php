@@ -9,6 +9,7 @@
     try{
         $newBD= new PDO("mysql:host=localhost;dbname=database",$user,$password);
         echo " Connexion établie <br>";
+        echo "Connexion établie";
     }catch(PDOException $e){
 
         die('Erreur : ' .$e->getMessage());
@@ -20,6 +21,9 @@
         !empty($_POST['email'])&&
         !empty($_POST['texte'])
      ) {
+
+
+            echo "Test Réussi";
             $insertion=$newBD->prepare ('INSERT INTO profil (nom, prenom, email, texte) VALUES(:nom, :prenom, :email, :texte)');
             $verification = $insertion->execute([
                 'nom' => $_POST['nom'],
