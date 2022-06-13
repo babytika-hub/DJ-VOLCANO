@@ -196,36 +196,36 @@ dl, ol, ul{
   .img-1{
     grid-area: img-1;
     min-height: 51.5rem;
-    background-image: url("image/img-1.jpg");
+    background-image: url("image/img-1.webp");
   }
   .img-2{
     grid-area: img-2;
-    background-image: url("image/img-2.jpg");
+    background-image: url("image/img-2.webp");
   }
   .img-3{
     grid-area: img-3;
-    background-image: url("image/img-3.jpg");
+    background-image: url("image/img-3.webp");
   }
   .img-4{
     grid-area: img-4;
-    background-image: url("image/img-4.jpg");
+    background-image: url("image/img-4.webp");
   }
   .img-5{
     grid-area: img-5;
-    background-image: url("image/img-5.jpg");
+    background-image: url("image/img-5.webp");
   }
   .img-6{
     grid-area: img-6;
     min-height: 51.5rem;
-    background-image: url("image/img-6.jpg");
+    background-image: url("image/img-6.webp");
   }
   .img-7{
     grid-area: img-7;
-    background-image: url("image/img-7.jpg");
+    background-image: url("image/img-7.webp");
   }
   .img-8{
     grid-area: img-8;
-    background-image: url("image/img-8.jpg");
+    background-image: url("image/img-8.webp");
   }
   .information h2{
     margin-top: 2rem;
