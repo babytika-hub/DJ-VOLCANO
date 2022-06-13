@@ -6,8 +6,6 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
-
-
 body, html{
   width: 100%;
 }
@@ -36,21 +34,32 @@ dl, ol, ul{
   margin-bottom: 0;
 }
 /* NAV BAR */
-#nav_bar{
-  position: initial;
-  background-color: black;
-}
 .nav_bar{  
   position: fixed;
   width: 100%;
   z-index: 2;
   padding: 1rem;
   transition: all 0.3s ease;
+  background-color:  rgba(0,0,0,.1);
+}
+.nav_bar a{
+  color: white;
+}
+.nav_bar a:hover{
+  background-color: rgba(255,255,255,0.3);
+}
+.nav_bar{
+  color: white;
+}
+.nav_bar.sticky a{
+  color: white;
 }
 .nav_bar.sticky{
-  background: black;
-  /* padding: 10px 0;   A VOIR SI SA POSE UN PROBLEME
-  CELA A REGLER LE PROBLEME DAFFICHAGE SUR LA PAGE TARIF AVEC LA NAVBAR */  
+  background-color:  rgba(0,0,0,.8);
+  color: white; 
+}
+.nav_bar.sticky a:hover{
+  background-color: rgba(255,255,255,0.3);
 }
 .nav_bar .content{
   display: flex;
@@ -58,13 +67,10 @@ dl, ol, ul{
   justify-content: space-between;
 }
 .nav_bar {
-  color: #fff;
-  font-size: 30px;
   font-weight: 600;
   text-decoration: none; 
 }
 .logo{
-    color: #fff;
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
@@ -79,25 +85,11 @@ dl, ol, ul{
   padding: 0 1rem 0 1rem;
 }
 .menu-list li a{
-  color: #fff;
+  padding: .5rem;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
-}
-.menu-list li a::after{
-  content: "";
-  display: block;
-  width: 0%;
-  height: 2px;
-  background: black;
-  transition:  width .3s ease-in-out;
-}
-.menu-list li a:hover::after{
-  width: 100%;
-}
-.menu-list li a:hover{
-  color: red;         
 }
 .burger{
   display: flex;
@@ -204,36 +196,39 @@ dl, ol, ul{
   .img-1{
     grid-area: img-1;
     min-height: 51.5rem;
-    background-image: url("photo/img-1.jpg");
+    background-image: url("image/img-1.jpg");
   }
   .img-2{
     grid-area: img-2;
-    background-image: url("photo/img-2.jpg");
+    background-image: url("image/img-2.jpg");
   }
   .img-3{
     grid-area: img-3;
-    background-image: url("photo/img-3.jpg");
+    background-image: url("image/img-3.jpg");
   }
   .img-4{
     grid-area: img-4;
-    background-image: url("photo/img-4.jpg");
+    background-image: url("image/img-4.jpg");
   }
   .img-5{
     grid-area: img-5;
-    background-image: url("photo/img-5.jpg");
+    background-image: url("image/img-5.jpg");
   }
   .img-6{
     grid-area: img-6;
     min-height: 51.5rem;
-    background-image: url("photo/img-6.jpg");
+    background-image: url("image/img-6.jpg");
   }
   .img-7{
     grid-area: img-7;
-    background-image: url("photo/img-7.jpg");
+    background-image: url("image/img-7.jpg");
   }
   .img-8{
     grid-area: img-8;
-    background-image: url("photo/img-8.jpg");
+    background-image: url("image/img-8.jpg");
+  }
+  .information h2{
+    margin-top: 2rem;
   }
   /* PAGE TARIFS */
   .little_banner img{
@@ -251,6 +246,9 @@ dl, ol, ul{
     left: 15%;
   }
   .container_presta p{
+    margin-top: 2rem;
+  }
+  .container_presta h1{
     margin-top: 2rem;
   }
 
@@ -364,22 +362,21 @@ dl, ol, ul{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
   }
-
-  /* PAGE RESERVATION */
-
-  .liste{
+  /* A PROPOS */
+  .bloc_container{
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+  }
+  .bloc_container h1{
+    text-decoration: underline;
+  }
+  .bloc_container h2{
+    text-decoration: underline;
     margin-bottom: 2rem;
   }
-
-  select{
-    width: 100%;
-    border: #3e3d3a 1px solid;
-    border-radius: 20px;
-    margin: 8px 0;
-    outline: none;
-    padding: 8px;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
+  .bloc_container p{
+    margin-bottom: 2rem;
   }
 
   /* FOOTER */
@@ -436,20 +433,8 @@ dl, ol, ul{
     letter-spacing: 2px;
   }
   /* MEDIA QUERIES */
-  @media (max-width: 1230px) {
-    .content{  /* A VOIR POUR LE RESPONSIVE */
-      padding: 0 60px;
-    }
-  }
-  @media (max-width: 1100px) {
-    .content{
-    padding: 0 40px;
-  }
-}
 @media (max-width: 900px) {
-  .content{
-    padding: 0 30px;
-  }
+
   .image-gallery{
     grid-template-areas: 
     'img-1 img-1 img-2 img-2'
@@ -476,8 +461,9 @@ dl, ol, ul{
   #card_presta{
     flex-wrap: wrap;
   }
+
 }
-@media (max-width: 868px) {
+@media (max-width:900px) {
   body.disabled{
     overflow: hidden;
   }
@@ -495,9 +481,9 @@ dl, ol, ul{
     top: 0px;
     display: block;
     padding: 40px 0;
-    text-align: center;
     background: #222;
     transition: all 0.3s ease;
+    z-index: 1;
   }
   .nav_bar.show .menu-list{
     left: 0%;
@@ -506,7 +492,6 @@ dl, ol, ul{
     margin-top: 45px;
   }
   .nav_bar .menu-list li a{
-    font-size: 23px;
     margin-left: -100%;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
